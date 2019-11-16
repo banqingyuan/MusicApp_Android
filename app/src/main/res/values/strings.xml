@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NoJie</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="welcomepageone">WelcomePageOne</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="key">09729047c18d692db2c65404c54f591d</string>
+</resources>
