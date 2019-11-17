@@ -36,5 +36,6 @@
         <activity android:name=".MainActivity">
         </activity>
         <activity android:name=".IndexActivity"/>
+        <activity android:name=".fragment.Article.activity_article"/>
     </application>
 </manifest>

@@ -10,10 +10,8 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.nojie.R;
-import com.example.nojie.fragment.Create.fragment_create;
 import com.example.nojie.fragment.Home.map.fragment_map;
 import com.example.nojie.fragment.Home.square.fragment_square;
-import com.example.nojie.fragment.Personal.fragment_personal;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;

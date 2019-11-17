@@ -36,8 +36,7 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:4.2.0'//okhttp3
     implementation 'com.zhy:okhttputils:2.6.2'
     implementation 'com.hjq:titlebar:6.0'
-    implementation 'com.zzhoujay.richtext:richtext:3.0.8'
-    implementation 'com.zzhoujay:html:1.0.2'
+    implementation 'org.jsoup:jsoup:1.11.3'
     testImplementation 'junit:junit:4.12'
     implementation 'com.github.bumptech.glide:glide:4.10.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.4.0'

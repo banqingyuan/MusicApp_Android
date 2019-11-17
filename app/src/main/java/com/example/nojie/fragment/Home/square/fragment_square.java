@@ -1,35 +1,23 @@
 package com.example.nojie.fragment.Home.square;
 
-import android.content.Context;
-import android.os.Build;
 import android.os.Bundle;
-import android.telecom.Call;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.bitmap.CenterCrop;
-import com.bumptech.glide.request.RequestOptions;
 import com.example.nojie.Entity.TuchongEntity;
-import com.example.nojie.MainActivity;
 import com.example.nojie.MyIndexRecyclerViewAdapter;
 import com.example.nojie.R;
-import com.example.nojie.fragment.Home.fragment_inspiration;
-import com.example.nojie.fragment.fragment_article;
-import com.example.nojie.utility.CornerTransform;
 import com.example.nojie.utility.ScreenUtils;
 import com.google.gson.Gson;
 import com.stx.xhb.androidx.XBanner;
@@ -40,7 +28,6 @@ import com.zhy.http.okhttp.callback.StringCallback;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import java.util.Objects;
 
 public class fragment_square extends Fragment {
     private TextView date;
