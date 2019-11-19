@@ -1,5 +1,6 @@
 package com.example.nojie.fragment.Personal;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -16,14 +17,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.nojie.MyIndexRecyclerViewAdapter;
 import com.example.nojie.R;
+import com.example.nojie.fragment.Article.activity_article;
 import com.hjq.bar.OnTitleBarListener;
 import com.hjq.bar.TitleBar;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class fragment_personal extends Fragment {
 
@@ -32,6 +41,8 @@ public class fragment_personal extends Fragment {
     private ImageView icon;
     private TextView username;
     private TextView usersign;
+    private RecyclerView recyclerView;
+    private List<personal_action> myDataset = new ArrayList<>();
 
     @Nullable
     @Override
@@ -47,8 +58,38 @@ public class fragment_personal extends Fragment {
         icon = root.findViewById(R.id.person_icon);
         username = root.findViewById(R.id.personal_user_name);
         usersign = root.findViewById(R.id.personal_user_sign);
+        recyclerView = root.findViewById(R.id.personal_recycler_view);
     }
     private void initData() {
+
+        personal_action personal_action1 = new personal_action();
+        personal_action personal_action2 = new personal_action();
+
+        personal_action1.setAction_type("发表了评论：");
+        personal_action2.setAction_type("发表了新作：");
+
+        personal_action1.setContent_text("宝哥归来，苏曼奥运中国团举杯");
+        personal_action2.setContent_text("陌路之魂皆可以爱相期");
+
+        myDataset.add(personal_action1);
+        myDataset.add(personal_action2);
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(layoutManager);
+        MyPersonalRecyclerViewAdapter adapter = new MyPersonalRecyclerViewAdapter(myDataset);
+        recyclerView.setAdapter(adapter);
+        adapter.setOnRecyclerItemClickLitener(new MyPersonalRecyclerViewAdapter.onRecyclerItemClickLitener() {
+            @Override
+            public void onRecyclerItemClick(RecyclerView.ViewHolder view, int position) {
+                Toast.makeText(getContext(), "内部点击"+position, Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void onRecyclerItemLongClick(RecyclerView.ViewHolder view, int position) {
+                Toast.makeText(getContext(), "内部长按"+position, Toast.LENGTH_SHORT).show();
+            }
+        });
 
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.icon);
         //设置bitmap.getWidth()可以获得圆形
@@ -129,5 +170,4 @@ public class fragment_personal extends Fragment {
         bmp.recycle();
         return output;
     }
-
 }
