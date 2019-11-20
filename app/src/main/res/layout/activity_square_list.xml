@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/cross">
+
+    </ImageView>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <FrameLayout
+            android:background="#fff"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/square_list1_class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:text="曲">
+
+                </TextView>
+                <Button
+                    android:id="@+id/square_list1_button1"
+                    android:layout_margin = "10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/square_list_button_style"
+                    android:text="原创">
+                </Button>
+                <Button
+                    android:id="@+id/square_list1_button2"
+                    android:layout_margin = "10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/square_list_button_style"
+                    android:text="改编">
+                </Button>
+                <Button
+                    android:id="@+id/square_list1_button3"
+                    android:layout_margin = "10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/square_list_button_style"
+                    android:text="Demo">
+                </Button>
+                <Button
+                    android:id="@+id/square_list1_button4"
+                    android:layout_margin = "10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/square_list_button_style"
+                    android:text="摇滚">
+                </Button>
+                <Button
+                    android:id="@+id/square_list1_button5"
+                    android:layout_margin = "10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/square_list_button_style"
+                    android:text="抒情">
+                </Button>
+                <Button
+                    android:id="@+id/square_list1_button6"
+                    android:layout_margin = "10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/square_list_button_style"
+                    android:text="重金属">
+                </Button>
+            </LinearLayout>
+        </FrameLayout>
+        <FrameLayout
+            android:background="#fff"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/square_list2_class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:text="词">
+
+                </TextView>
+                <Button
+                    android:id="@+id/square_list2_button1"
+                    android:layout_margin = "10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/square_list_button_style"
+                    android:text="原创">
+                </Button>
+                <Button
+                    android:id="@+id/square_list2_button2"
+                    android:layout_margin = "10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/square_list_button_style"
+                    android:text="改编">
+                </Button>
+                <Button
+                    android:id="@+id/square_list2_button3"
+                    android:layout_margin = "10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/square_list_button_style"
+                    android:text="RAP">
+                </Button>
+                <Button
+                    android:id="@+id/square_list2_button4"
+                    android:layout_margin = "10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/square_list_button_style"
+                    android:text="摇滚">
+                </Button>
+                <Button
+                    android:id="@+id/square_list2_button5"
+                    android:layout_margin = "10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/square_list_button_style"
+                    android:text="抒情">
+                </Button>
+                <Button
+                    android:id="@+id/square_list2_button6"
+                    android:layout_margin = "10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/square_list_button_style"
+                    android:text="中国风">
+                </Button>
+            </LinearLayout>
+        </FrameLayout>
+        <FrameLayout
+            android:background="#fff"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/square_list_class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:text="唱">
+
+                </TextView>
+                <Button
+                    android:id="@+id/square_list3_button1"
+                    android:layout_margin = "10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/square_list_button_style"
+                    android:text="原创">
+                </Button>
+                <Button
+                    android:id="@+id/square_list3_button2"
+                    android:layout_margin = "10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/square_list_button_style"
+                    android:text="翻唱">
+                </Button>
+                <Button
+                    android:id="@+id/square_list3_button3"
+                    android:layout_margin = "10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/square_list_button_style"
+                    android:text="男声">
+                </Button>
+                <Button
+                    android:id="@+id/square_list3_button4"
+                    android:layout_margin = "10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/square_list_button_style"
+                    android:text="女声">
+                </Button>
+                <Button
+                    android:id="@+id/square_list3_button5"
+                    android:layout_margin = "10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/square_list_button_style"
+                    android:text="对唱">
+                </Button>
+                <Button
+                    android:id="@+id/square_list3_button6"
+                    android:layout_margin = "10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/square_list_button_style"
+                    android:text="摇滚">
+                </Button>
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/square_list_confirm_button_style"
+        android:layout_height="70dp"
+        android:text="确   定"
+        android:textSize="20sp">
+
+    </Button>
+</LinearLayout>

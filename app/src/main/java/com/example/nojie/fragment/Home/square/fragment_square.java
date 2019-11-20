@@ -1,5 +1,6 @@
 package com.example.nojie.fragment.Home.square;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,7 @@ import com.bumptech.glide.Glide;
 import com.example.nojie.Entity.TuchongEntity;
 import com.example.nojie.MyIndexRecyclerViewAdapter;
 import com.example.nojie.R;
+import com.example.nojie.activity_square_list;
 import com.example.nojie.utility.ScreenUtils;
 import com.google.gson.Gson;
 import com.stx.xhb.androidx.XBanner;
@@ -41,6 +43,7 @@ public class fragment_square extends Fragment {
     private TextView push_2_time;
     private TextView push_3_title;
     private TextView push_3_time;
+    private ImageView square_list_button;
     private List<Recommend_Model> models = new ArrayList<>();
     private RecyclerView recommend_list;
     private TextView push_title;
@@ -104,6 +107,14 @@ public class fragment_square extends Fragment {
         mXBanner.setBannerData(data);
     }
     public void initData() {
+
+        list_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), activity_square_list.class);
+                startActivity(intent);
+            }
+        });
 
         push_title.setText("你可能感兴趣的盲选新作");
 
