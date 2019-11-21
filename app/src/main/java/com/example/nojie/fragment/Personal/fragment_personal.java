@@ -113,7 +113,8 @@ public class fragment_personal extends Fragment {
 
                 @Override
                 public void onRightClick(View v) {
-
+                    Intent intent = new Intent(getActivity(), activity_personal_setting.class);
+                    startActivity(intent);
                 }
             });
     }

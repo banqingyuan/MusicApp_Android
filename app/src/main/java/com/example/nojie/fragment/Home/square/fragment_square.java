@@ -19,7 +19,6 @@ import com.bumptech.glide.Glide;
 import com.example.nojie.Entity.TuchongEntity;
 import com.example.nojie.MyIndexRecyclerViewAdapter;
 import com.example.nojie.R;
-import com.example.nojie.activity_square_list;
 import com.example.nojie.utility.ScreenUtils;
 import com.google.gson.Gson;
 import com.stx.xhb.androidx.XBanner;

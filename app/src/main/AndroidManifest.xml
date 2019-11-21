@@ -37,6 +37,7 @@
         </activity>
         <activity android:name=".IndexActivity"/>
         <activity android:name=".fragment.Article.activity_article"/>
-        <activity android:name=".activity_square_list"/>
+        <activity android:name=".fragment.Home.square.activity_square_list"/>
+        <activity android:name=".fragment.Personal.activity_personal_setting"/>
     </application>
 </manifest>

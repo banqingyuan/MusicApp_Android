@@ -3,6 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ImageView
+        android:id="@+id/square_list_cross_button"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginLeft="20dp"
@@ -234,6 +235,7 @@
 
     </LinearLayout>
     <Button
+        android:id="@+id/square_list_confirm"
         android:layout_width="match_parent"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="20dp"
