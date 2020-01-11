@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         PackageInfo info = null;
         try {
             info = getPackageManager().getPackageInfo(getPackageName(), 0);
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         int currentVersion = info.versionCode;
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         int lastVersion = prefs.getInt("VERSION_KEY", 0);
-        if (currentVersion >= lastVersion) {
+        if (currentVersion > lastVersion) {
             //如果当前版本大于上次版本，该版本属于第一次启动
             SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
             ViewPager viewPager = findViewById(R.id.view_pager);

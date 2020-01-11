@@ -32,6 +32,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui:2.1.0'
     implementation 'com.amap.api:map2d:5.2.0'
     implementation 'com.github.xiaohaibin:XBanner:androidx_v1.0.2'
+    implementation 'org.litepal.android:java:3.0.0'
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.squareup.okhttp3:okhttp:4.2.0'//okhttp3
     implementation 'com.zhy:okhttputils:2.6.2'
