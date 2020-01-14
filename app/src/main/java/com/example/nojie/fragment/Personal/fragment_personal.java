@@ -15,21 +15,31 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatEditText;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.example.nojie.MyIndexRecyclerViewAdapter;
+import com.example.nojie.Myapp;
 import com.example.nojie.R;
 import com.example.nojie.fragment.Article.activity_article;
+import com.example.nojie.utility.SendRequest;
+import com.google.android.material.textfield.TextInputEditText;
 import com.hjq.bar.OnTitleBarListener;
 import com.hjq.bar.TitleBar;
+
+import org.json.JSONArray;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,15 +54,36 @@ public class fragment_personal extends Fragment {
     private RecyclerView recyclerView;
     private List<personal_action> myDataset = new ArrayList<>();
 
+    private Myapp myapp;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-        View root = inflater.inflate(R.layout.fragment_personal, container, false);
+        myapp = (Myapp)getActivity().getApplication();
+        root = inflater.inflate(R.layout.fragment_personal, container, false);
         initContentView(root);
         initData();
+        if(!myapp.getLogin_status()) {
+            Intent intent = new Intent(getActivity(), Login_Acitvity.class);
+            startActivity(intent);
+        }
+
         return root;
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        int i = 3000;
+        for(int j=0;j<i;j++){
+
+        }
+        if(!myapp.getLogin_status()) {
+            Intent intent = new Intent(getActivity(), Login_Acitvity.class);
+            startActivity(intent);
+        }
+    }
+
     private void initContentView(View root) {
         titleBar = root.findViewById(R.id.personal_titleBar);
         icon = root.findViewById(R.id.person_icon);

@@ -12,6 +12,7 @@ import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 
+import com.example.nojie.Myapp;
 import com.example.nojie.R;
 import com.example.nojie.utility.SendRequest;
 import com.hjq.bar.OnTitleBarListener;
@@ -30,9 +31,12 @@ public class activity_personal_setting extends Activity {
     private ImageView icon;
     private TitleBar titleBar;
     private Button subButton;
+    private Myapp myapp;
+    private Button logout_btn;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_personal_setting);
 
         initContent();
@@ -40,9 +44,11 @@ public class activity_personal_setting extends Activity {
     }
 
     private void initContent() {
+        myapp = (Myapp)getApplication();
         icon = findViewById(R.id.personal_setting_icon_view);
         titleBar = findViewById(R.id.personal_setting_titleBar);
         subButton = findViewById(R.id.personal_setting_submit);
+        logout_btn = findViewById(R.id.personal_setting_logout);
     }
 
     private void initData(){
@@ -74,9 +80,8 @@ public class activity_personal_setting extends Activity {
                     @Override
                     public void run() {
                         try{
-                            SendRequest sendRequest = new SendRequest("/pull_user");
+                            SendRequest sendRequest = new SendRequest("/pull_user?userName="+myapp.getUserName());
                             String response = sendRequest.sendRequest();
-                            parseJSONWithJSONObject(response);//调用json解析的方法
                         }catch (Exception e){
                             e.printStackTrace();
                         }
@@ -84,15 +89,27 @@ public class activity_personal_setting extends Activity {
                 }).start();
             }
         });
-    }
-    private void parseJSONWithJSONObject(String jsonData){
-        try{
-            JSONObject jsonObject = new JSONObject(jsonData);//新建json对象实例
-            JSONObject jsonObject1 = jsonObject.getJSONObject("section");
-            String name = jsonObject1.getString("id");//取得其名字的值，一般是字符串
-
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+        logout_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try{
+                            SendRequest sendRequest = new SendRequest("/login/out?userName="+ myapp.getUserName());
+                            String reponse = sendRequest.sendRequest();
+                            if(reponse.equals("true")){
+                                myapp.setLogin_status(false);
+                                myapp.setUserName(null);
+                                myapp.setUserId(null);
+                                finish();
+                            }
+                        }catch (Exception e){
+                            e.printStackTrace();
+                        }
+                    }
+                }).start();
+            }
+        });
     }
 }

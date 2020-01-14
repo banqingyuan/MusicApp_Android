@@ -304,14 +304,29 @@
         </FrameLayout>
 
     </FrameLayout>
-    <Button
-        android:id="@+id/personal_setting_submit"
-        android:layout_marginTop="10dp"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:background="#ffffff"
-        android:text="提交更改">
+        android:paddingTop="10dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/personal_setting_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:text="提交更改">
 
-    </Button>
+        </Button>
+        <Button
+            android:id="@+id/personal_setting_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="#ffffff"
+            android:text="退出登录">
+
+        </Button>
+    </LinearLayout>
+
 </LinearLayout>

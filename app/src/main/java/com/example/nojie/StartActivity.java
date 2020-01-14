@@ -11,6 +11,11 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.amap.api.mapcore2d.db;
+import com.example.nojie.model.Current_User;
+import com.example.nojie.utility.SendRequest;
+
+import org.json.JSONObject;
 import org.litepal.LitePal;
 
 //每次开启App进入的第一个界面
@@ -21,9 +26,9 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
         final StartActivity view = this;
-        LitePal.initialize(this);
-        SQLiteDatabase db = LitePal.getDatabase();
+
         View root = (FrameLayout)findViewById(R.id.StartActivity);
+
         TextView textView1= findViewById(R.id.StartText1);
         TextView textView2 = findViewById(R.id.StartText2);
         textView2.setVisibility(View.INVISIBLE);
@@ -56,4 +61,6 @@ public class StartActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }
